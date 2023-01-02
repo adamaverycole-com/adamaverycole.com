@@ -1,0 +1,66 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {% assign resume = site.data.resume[0] %}
+  <div class="wrapper">
+      <div class="resume-header resume-header-col-wrapper">
+          <div class="resume-header-col resume-header-col-1 resume-headshot">
+              <img src="/assets/headshot.jpeg" onload="formatJobDateRanges()" />
+          </div>
+          <div class="resume-header-col resume-header-col-2">{{ resume.description }}</div>
+      </div>
+  </div>
+  <div class="resume-job-history">
+  <ol>
+  {% for job in resume.jobHistory reversed %}
+  {% assign company = job.company %}
+  {% if job.companyUrl %}
+  {% capture company %}<a href="{{ job.companyUrl }}" target="_blank">{{ job.company }}</a>{% endcapture %}
+  {% endif %}
+   <li>
+  {% if job.positions %}
+          <span class="major-timeline-event job-company">{{ company }}</span><br />
+          {% if job.duration == "calculate" %}
+          {% assign uniqueJobElementId = job | generateUniqueIdForJobHistoryElement %}
+          <span class="job-date-range calculated-date-range" id="{{ uniqueJobElementId }}" data-start-date="{{ job.startDate }}"></span>
+          {% else %}
+          <span class="job-date-range">{{ job.startDate | date: "%b %Y" }} - {{ job.endDate | date: "%b %Y" }} · {{ job.duration }}</span>
+          {% endif %}
+  {% for position in job.positions reversed %}
+          <ul>
+              <li class="minor-timeline-event job-title">{{ position.title }}</li>
+              <ul>
+              {% if position.duration == "calculate" %}
+              {% assign uniquePositionElementId = position | generateUniqueIdForJobHistoryElement %}
+                  <li class="job-date-range calculated-date-range" data-start-date="{{ position.startDate }}" id="{{ uniquePositionElementId }}"></li>
+              {% else %}
+                  <li class="job-date-range">{{ position.startDate | date: "%b %Y" }} - {{ position.endDate | date: "%b %Y" }} · {{ position.duration }}</li>
+              {% endif %}
+                  <li class="job-location">{{ position.location }}</li>
+  {% if position.description %}
+                  <li class="job-description">{{ position.description }}</li> 
+  {% endif %}
+              </ul>
+          </ul>
+  {% endfor %}
+  {% else %}
+          <span class="major-timeline-event job-title">{{ job.title }}</span>
+          <ul>
+              <li class="job-company">{{ company }}</li>
+              <li class="job-date-range">{{ job.startDate | date: "%b %Y" }} - {{ job.endDate | date: "%b %Y" }} · {{ job.duration }}</li>
+              <li class="job-location">{{ job.location }}</li>
+              {% if job.description %} <li class="job-description">{{ job.description }}</li> {% endif %}
+          </ul>
+  {% endif %}
+   </li>
+  {% endfor %}
+  </ol>
+  </div>
+
+</div>

@@ -1,0 +1,61 @@
+.resume-header .resume-headshot img { 
+    border-top-left-radius: 50% 50%; 
+    border-top-right-radius: 50% 50%; 
+    border-bottom-right-radius: 50% 50%; 
+    border-bottom-left-radius: 50% 50%; 
+    outline: 7px solid #333;
+    outline-offset: -2px;
+}
+.resume-job-history ul { 
+    list-style: none; 
+    margin-left: 5px; 
+    margin-bottom: 0;
+}
+.resume-job-history > ul { 
+    border-left: 2px solid #555;
+    padding-left: 30px;
+}
+.resume-job-history ol > li > span.major-timeline-event { 
+    list-style: none; 
+    font-weight: bolder;
+    font-size: larger;
+}
+.resume-job-history ol > li > span.major-timeline-event ~ span.job-date-range {
+    /* margin-top: -50px; */
+    /* font-size: smaller; */
+    margin-left: 5px;
+}
+.resume-job-history ol > li { 
+    margin-top: 15px;
+}
+.resume-job-history .job-date-range, .resume-job-history .job-location { 
+    /* font-weight: lighter;  */
+    /* font-size: smaller; */
+    color:#888;
+}
+.resume-job-history .major-timeline-event ~ .job-date-range { 
+    /* font-weight: lighter;  */
+    /* font-size: larger; */
+}
+.resume-job-history .job-description {
+    padding-top: 10px;
+    /* font-weight: bolder; */
+    /* font-size: smaller; */
+    /* font:  */
+}
+/* .resume-job-history .job-location {
+    font-style: italic;
+} */
+.resume-job-history .minor-timeline-event {
+    font-weight: bold;
+    margin-top: 10px;
+}
+.resume-job-history ol > li { 
+    list-style: none; 
+    border-left: 5px solid #333;
+    padding-left: 30px;
+}
+.resume-header-col-wrapper { margin-left: -15px; }
+.resume-header-col { float: left; margin-bottom: 15px; padding-left: 15px; }
+.resume-header-col-1 { width: -webkit-calc(35% - (30px / 2)); width: calc(35% - (30px / 2)); }
+.resume-header-col-2 { width: -webkit-calc(65% - (30px / 2)); width: calc(65% - (30px / 2)); vertical-align: middle; }
