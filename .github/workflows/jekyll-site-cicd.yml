@@ -30,7 +30,7 @@ jobs:
         JEKYLL_ENV=production bundle exec jekyll build
 
   release-dev:
-    if: "${{ jobs.build.status == 'success' }}"
+    needs: [build]
     environment:
       name: dev
       url: https://github.com/${{ github.repository }}/releases/tag/${{ steps.semantic-release.outputs.release-tag }}
@@ -48,7 +48,7 @@ jobs:
           ncftpput -R -v -u "$ftp_username" -p "$ftp_password" $ftp_location / _site/* 
 
   release-prod:
-    if: "${{ jobs.release-dev.status == 'success' }}"
+    needs: [build, release-dev]
     environment:
       name: prod
       url: https://github.com/${{ github.repository }}/releases/tag/${{ steps.semantic-release.outputs.release-tag }}
