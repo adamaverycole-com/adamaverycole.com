@@ -1,4 +1,4 @@
-.name: Jekyll Build & FTP Site
+name: Jekyll Build & FTP Site
 # Run on pushes to the master branch
 on: 
   push:
