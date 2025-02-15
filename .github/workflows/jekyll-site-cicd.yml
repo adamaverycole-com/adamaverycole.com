@@ -27,19 +27,15 @@ jobs:
       run: |
         cd site
         JEKYLL_ENV=production bundle exec jekyll build
-        tar -czvf site.tar.gz /home/runner/work/adamaverycole.com/adamaverycole.com/site/_site
-        ls -al
 
     # Package and publish artifacts
     - name: Upload Build Artifact
       uses: actions/upload-artifact@v4.6.0
       with:
         # Artifact name
-        # name: artifact # optional, default is artifact
-        name: site.tar.gz # optional, default is artifact
+        name: artifact # optional, default is artifact
         # A file, directory or wildcard pattern that describes what to upload
-        # path: /home/runner/work/adamaverycole.com/adamaverycole.com/site/_site
-        path: /home/runner/work/adamaverycole.com/adamaverycole.com/site/site.tar.gz
+        path: /home/runner/work/adamaverycole.com/adamaverycole.com/site/_site
         # The desired behavior if no files are found using the provided path.
         warn: Output a warning but do not fail the action
         error: Fail the action with an error message
@@ -95,7 +91,7 @@ jobs:
           artifacts_dir: ${{ github.workspace }}
         run: |
           cd $artifacts_dir
-          tar -xzvf site.tar.gz ./_site
+          tar -xzf artifact.zip ./_site
           ncftpput -R -v -u "$ftp_username" -p "$ftp_password" $ftp_location /dev/ _site/* 
 
   release-prod:
@@ -137,5 +133,5 @@ jobs:
           artifacts_dir: ${{ github.workspace }}
         run: |
           cd $artifacts_dir
-          tar -xzvf site.tar.gz ./_site
+          tar -xzf artifact.zip ./_site
           ncftpput -R -v -u "$ftp_username" -p "$ftp_password" $ftp_location / _site/* 
