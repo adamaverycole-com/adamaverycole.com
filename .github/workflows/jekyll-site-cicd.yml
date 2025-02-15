@@ -28,6 +28,7 @@ jobs:
         cd site
         JEKYLL_ENV=production bundle exec jekyll build
         tar -czvf site.tar.gz /home/runner/work/adamaverycole.com/adamaverycole.com/site/_site
+        ls -al
 
     # Package and publish artifacts
     - name: Upload Build Artifact
