@@ -91,12 +91,7 @@ jobs:
           artifacts_dir: ${{ github.workspace }}
         run: |
           cd $artifacts_dir
-          cd artifact
-          pwd
-          ls -al
-          # tar -xzf artifact.zip ./_site
-          # ls -al
-          ncftpput -R -v -u "$ftp_username" -p "$ftp_password" $ftp_location /dev/ .
+          ncftpput -R -v -u "$ftp_username" -p "$ftp_password" $ftp_location /dev/ ./artifact/
 
   release-prod:
     needs: [build, release-dev]
@@ -133,9 +128,8 @@ jobs:
         env: 
           ftp_location: ${{ secrets.FTP_LOCATION }} # Pass in required secrets.
           ftp_username: ${{ secrets.FTP_USERNAME }}
-          ftp_password: ${{ secrets.FTP_PASSWORD }}  
+          ftp_password: ${{ secrets.FTP_PASSWORD }} 
           artifacts_dir: ${{ github.workspace }}
         run: |
           cd $artifacts_dir
-          tar -xzf artifact.zip ./_site
-          ncftpput -R -v -u "$ftp_username" -p "$ftp_password" $ftp_location / _site/* 
+          ncftpput -R -v -u "$ftp_username" -p "$ftp_password" $ftp_location / ./artifact/
