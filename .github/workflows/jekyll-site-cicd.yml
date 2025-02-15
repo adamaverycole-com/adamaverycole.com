@@ -7,7 +7,7 @@ on:
       - dev
       - dev-*
 env:
-  ftp_dir: ${{ github.ref == 'refs/heads/main' && '' || github.ref.name }}
+  ftp_dir: ${{ github.ref == 'refs/heads/main' && secrets.FTP_LOCATION || format("{0}/{1}", secrets.FTP_LOCATION, github.ref.name ) }}
 jobs:
   build:
     runs-on: ubuntu-latest
