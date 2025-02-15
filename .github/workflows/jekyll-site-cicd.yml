@@ -17,6 +17,7 @@ jobs:
     # Install the gems in the gemfile & install ncftp
     - name: Setup Environment.
       run: |
+        cd site
         bundle install
         sudo apt-get install -y ncftp
     
