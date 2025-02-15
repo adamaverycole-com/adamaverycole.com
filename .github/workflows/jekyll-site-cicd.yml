@@ -27,6 +27,7 @@ jobs:
       run: |
         cd site
         JEKYLL_ENV=production bundle exec jekyll build
+        tar -czvf site.tar.gz /home/runner/work/adamaverycole.com/adamaverycole.com/site/_site
 
     # Package and publish artifacts
     - name: Upload Build Artifact
@@ -80,14 +81,19 @@ jobs:
           # repository: # optional, default is ${{ github.repository }}
           # The id of the workflow run where the desired download artifact was uploaded from. If github-token is specified, this is the run that artifacts will be downloaded from.
           # run-id: # optional, default is ${{ github.run_id }}
+      
+      
       # Looks kind of complicated but just uploads the content of _site folder to the ftp server. It does not upload the _site folder itself.
       - name: Upload site to FTP.
         env: 
           ftp_location: ${{ secrets.FTP_LOCATION }} # Pass in required secrets.
           ftp_username: ${{ secrets.FTP_USERNAME }}
           ftp_password: ${{ secrets.FTP_PASSWORD }} 
+          artifacts_dir: ${{ github.workspace }}
         run: |
-          ncftpput -R -v -u "$ftp_username" -p "$ftp_password" $ftp_location /dev _site/* 
+          cd $artifacts_dir
+          tar -xzvf site.tar.gz ./_site
+          ncftpput -R -v -u "$ftp_username" -p "$ftp_password" $ftp_location /dev/ _site/* 
 
   release-prod:
     needs: [build, release-dev]
@@ -124,7 +130,9 @@ jobs:
         env: 
           ftp_location: ${{ secrets.FTP_LOCATION }} # Pass in required secrets.
           ftp_username: ${{ secrets.FTP_USERNAME }}
-          ftp_password: ${{ secrets.FTP_PASSWORD }} 
+          ftp_password: ${{ secrets.FTP_PASSWORD }}  
+          artifacts_dir: ${{ github.workspace }}
         run: |
-          # cd site
+          cd $artifacts_dir
+          tar -xzvf site.tar.gz ./_site
           ncftpput -R -v -u "$ftp_username" -p "$ftp_password" $ftp_location / _site/* 
