@@ -87,7 +87,7 @@ jobs:
           ftp_username: ${{ secrets.FTP_USERNAME }}
           ftp_password: ${{ secrets.FTP_PASSWORD }} 
         run: |
-          ncftpput -R -v -u "$ftp_username" -p "$ftp_password" $ftp_location / _site/* 
+          ncftpput -R -v -u "$ftp_username" -p "$ftp_password" $ftp_location /dev _site/* 
 
   release-prod:
     needs: [build, release-dev]
