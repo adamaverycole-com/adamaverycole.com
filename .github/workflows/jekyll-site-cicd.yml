@@ -91,7 +91,10 @@ jobs:
           artifacts_dir: ${{ github.workspace }}
         run: |
           cd $artifacts_dir
+          pwd
+          ls -al
           tar -xzf artifact.zip ./_site
+          ls -al
           ncftpput -R -v -u "$ftp_username" -p "$ftp_password" $ftp_location /dev/ _site/* 
 
   release-prod:
