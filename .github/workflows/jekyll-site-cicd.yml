@@ -29,11 +29,30 @@ jobs:
         cd site
         JEKYLL_ENV=production bundle exec jekyll build
 
-  release:
+  release-dev:
+    if: "${{ job.build.status == 'success' }}"
     environment:
       name: dev
       url: https://github.com/${{ github.repository }}/releases/tag/${{ steps.semantic-release.outputs.release-tag }}
-    name: Semantic release
+    name: Dev
+    runs-on: ubuntu-latest
+    steps:
+      # Looks kind of complicated but just uploads the content of _site folder to the ftp server. It does not upload the _site folder itself.
+      - name: Upload site to FTP.
+        env: 
+          ftp_location: ${{ secrets.FTP_LOCATION }} # Pass in required secrets.
+          ftp_username: ${{ secrets.FTP_USERNAME }}
+          ftp_password: ${{ secrets.FTP_PASSWORD }} 
+        run: |
+          cd site
+          ncftpput -R -v -u "$ftp_username" -p "$ftp_password" $ftp_location / _site/* 
+
+  release-prod:
+    if: "${{ job.release-dev.status == 'success' }}"
+    environment:
+      name: prod
+      url: https://github.com/${{ github.repository }}/releases/tag/${{ steps.semantic-release.outputs.release-tag }}
+    name: Prod
     runs-on: ubuntu-latest
     steps:
       # Looks kind of complicated but just uploads the content of _site folder to the ftp server. It does not upload the _site folder itself.
