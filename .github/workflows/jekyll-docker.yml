@@ -1,8 +1,8 @@
-name: Jekyll site CI
+vname: Jekyll site CI
 
 on:
   push:
-    branches: [ "main", "dev" ]
+    branches: [ "main", "dev", "dev/*" ]
   pull_request:
     branches: [ "main", "dev" ]
 
