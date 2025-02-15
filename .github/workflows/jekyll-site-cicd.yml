@@ -23,7 +23,9 @@ jobs:
     
     # Build the site
     - name: Build Site with Jekyll.
-      run: JEKYLL_ENV=production bundle exec jekyll build
+      run: |
+        cd site
+        JEKYLL_ENV=production bundle exec jekyll build
     
     # Looks kind of complicated but just uploads the content of _site folder to the ftp server. It does not upload the _site folder itself.
     - name: Upload site to FTP.
@@ -32,4 +34,5 @@ jobs:
         ftp_username: ${{ secrets.FTP_USERNAME }}
         ftp_password: ${{ secrets.FTP_PASSWORD }} 
       run: |
+        cd site
         ncftpput -R -v -u "$ftp_username" -p "$ftp_password" $ftp_location / _site/* 
