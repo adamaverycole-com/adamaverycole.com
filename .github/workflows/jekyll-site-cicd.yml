@@ -96,7 +96,7 @@ jobs:
           ls -al
           # tar -xzf artifact.zip ./_site
           # ls -al
-          ncftpput -R -v -u "$ftp_username" -p "$ftp_password" $ftp_location /dev/ _site/* 
+          ncftpput -R -v -u "$ftp_username" -p "$ftp_password" $ftp_location /dev/ artifact/* 
 
   release-prod:
     needs: [build, release-dev]
