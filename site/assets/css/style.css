@@ -5,6 +5,7 @@
     border-bottom-left-radius: 50% 50%;
     outline: 7px solid #333;
     outline-offset: -7px;
+    min-width: 233px;
 }
 .resume-job-history ul {
     list-style: none;
@@ -82,4 +83,16 @@
 /* .resume-header-col-wrapper {margin-left: -15px;} */
 .resume-header-col {float: left;/* margin-bottom: 15px; *//* margin-left: 15px; */}
 .resume-header-col-1 { width: -webkit-calc(35% - (30px / 2)); width: calc(35% - (30px / 2)); }
-.resume-header-col-2 {width: -webkit-calc(65% - (30px / 2));width: calc(65% - (30px / 2));vertical-align: middle;padding-left: 30px;}
+.resume-header-col-2 {width: -webkit-calc(65% - (30px / 2));width: calc(65% - (30px / 2));vertical-align: middle; padding-left: 30px;}
+@include media-query($on-laptop) {
+.resume-header-col-1,
+.resume-header-col-2 {
+    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+    width:         calc(100% - (#{$spacing-unit} / 2));
+}
+
+/* .footer-col-3 {
+    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+    width:         calc(100% - (#{$spacing-unit} / 2));
+} */
+}
