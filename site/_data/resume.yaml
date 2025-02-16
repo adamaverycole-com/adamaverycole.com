@@ -2,27 +2,33 @@
   jobHistory:
     - company: Oklahoma Christian University
       companyUrl: https://oc.edu
-      startDate: 03-01-2005
-      endDate: 04-01-2007
-      duration: 2 yrs 2 mos
-      title: Software Support Technician
-      location: Oklahoma City, OK
-      description: 
+      positions:
+      - title: Software Support Technician
+        startDate: 03-01-2005
+        endDate: 04-01-2007
+        duration: 2 yrs 2 mos
+        location: Oklahoma City, OK
+        description: 
     - company: Infinite Images Photography
-      startDate: 05-01-2005
-      endDate: 09-01-2007
-      duration: 2 yrs 4 mos
-      title: Second Shooter and Photographer's Assistant
-      location: Springfield, MO Area
-      description: 
+      positions:
+      - title: Second Shooter and Photographer's Assistant
+        startDate: 05-01-2005
+        endDate: 09-01-2007
+        duration: 2 yrs 4 mos
+        location: Springfield, MO Area
+        description: 
     - company: Jack Henry & Associates
       companyUrl: https://jackhenry.com
-      startDate: 06-01-2007
-      endDate: 09-01-2008
-      duration: 1 yr 3 mos
-      title: Programmer/Analyst 1
-      location: Springfield, MO
-      description: 
+      # xstartDate: 06-01-2007
+      # xendDate: 09-01-2008
+      # xduration: 1 yr 3 mos
+      positions:
+      - title: Programmer/Analyst 1
+        startDate: 06-01-2007
+        endDate: 09-01-2008
+        duration: 1 yr 3 mos
+        location: Springfield, MO
+        description: 
     - company: Chesapeak Energy
       companyUrl: https://chk.com
       startDate: 09-01-2008

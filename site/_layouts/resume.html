@@ -10,11 +10,16 @@ layout: default
   {% assign resume = site.data.resume[0] %}
   <div class="wrapper">
       <div class="resume-header resume-header-col-wrapper">
-          <div class="resume-header-col resume-header-col-1 resume-headshot">
-              <img src="{{ "./assets/headshot.jpeg" }}" onload="formatJobDateRanges()" />
-          </div>
-          <div class="resume-header-col resume-header-col-2">{{ resume.description }}</div>
+        <div class="resume-header-col resume-header-col-1 resume-headshot">
+            <img src="{{ "./assets/headshot.jpeg" }}" onload="formatJobDateRanges()" />
+        </div>
+        <div class="resume-header-col resume-header-col-2"></div>
       </div>
+  </div>
+  <div class="resume-job-history"><br/>
+    <h2>Director of Software Development</h2>
+    <h3>Learning to lead.</h3>
+    <p>{{ resume.description }}</p>
   </div>
   <div class="resume-job-history">
   <ol>
@@ -26,26 +31,29 @@ layout: default
    <li>
   {% if job.positions %}
           <span class="major-timeline-event job-company">{{ company }}</span><br />
+        {% if job.startDate %}
           {% if job.duration == "calculate" %}
           {% assign uniqueJobElementId = job | generateUniqueIdForJobHistoryElement %}
           <span class="job-date-range calculated-date-range" id="{{ uniqueJobElementId }}" data-start-date="{{ job.startDate }}"></span>
           {% else %}
           <span class="job-date-range">{{ job.startDate | date: "%b %Y" }} - {{ job.endDate | date: "%b %Y" }} · {{ job.duration }}</span>
           {% endif %}
+        {% endif %}
   {% for position in job.positions reversed %}
           <ul>
               <li class="minor-timeline-event job-title">{{ position.title }}</li>
-              <ul>
-              {% if position.duration == "calculate" %}
-              {% assign uniquePositionElementId = position | generateUniqueIdForJobHistoryElement %}
+               
+             <ul>
+                {% if position.duration == "calculate" %}
+                  {% assign uniquePositionElementId = position | generateUniqueIdForJobHistoryElement %}
                   <li class="job-date-range calculated-date-range" data-start-date="{{ position.startDate }}" id="{{ uniquePositionElementId }}"></li>
-              {% else %}
+                {% else %}
                   <li class="job-date-range">{{ position.startDate | date: "%b %Y" }} - {{ position.endDate | date: "%b %Y" }} · {{ position.duration }}</li>
-              {% endif %}
+                {% endif %}
                   <li class="job-location">{{ position.location }}</li>
-  {% if position.description %}
+                {% if position.description %}
                   <li class="job-description">{{ position.description }}</li> 
-  {% endif %}
+                {% endif %}
               </ul>
           </ul>
   {% endfor %}
@@ -53,7 +61,7 @@ layout: default
           <span class="major-timeline-event job-title">{{ job.title }}</span>
           <ul>
               <li class="job-company">{{ company }}</li>
-              <li class="job-date-range">{{ job.startDate | date: "%b %Y" }} - {{ job.endDate | date: "%b %Y" }} · {{ job.duration }}</li>
+              {% if job.startDate %}<li class="job-date-range">{{ job.startDate | date: "%b %Y" }} - {{ job.endDate | date: "%b %Y" }} · {{ job.duration }}</li>{% endif %}
               <li class="job-location">{{ job.location }}</li>
               {% if job.description %} <li class="job-description">{{ job.description }}</li> {% endif %}
           </ul>
