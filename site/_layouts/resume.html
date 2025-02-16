@@ -11,7 +11,7 @@ layout: default
   <div class="wrapper">
       <div class="resume-header resume-header-col-wrapper">
           <div class="resume-header-col resume-header-col-1 resume-headshot">
-              <img src="/assets/headshot.jpeg" onload="formatJobDateRanges()" />
+              <img src="{{ "assets/headshot.jpeg" | relative_url }}" onload="formatJobDateRanges()" />
           </div>
           <div class="resume-header-col resume-header-col-2">{{ resume.description }}</div>
       </div>
