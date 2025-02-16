@@ -1,4 +1,4 @@
-- description: <p>Adam is an experienced people leader who began his career as a Software Developer after graduating in 2007 with a BS in Computer Information Systems from <a href="https://oc.edu" target="_blank">Oklahoma Christian University</a>. He is passionate about leading through the mundane, the difficult and constant change with kindness, determination, and curiosity. Adam loves to build leaders who build other leaders. Always believing that he is a work in progress, he firmly adheres to the philosophy if you don't change you cannot get better and if you don't get feedback, you don't know what to change.</p><p>Adam is currently a Senior Manager Software Development of Payroll Technology at <a href="https://heartland.us" target="_blank">Heartland Payment Systems</a>.</p>
+- description: <p>Influential leader in technology with 16+ years of experience in automation, engineering, software development, and adept team management within the FinTech and Energy sectors. Proven track record pioneering innovation, building high-performing teams, and orchestrating strategic solutions that leave a lasting impact. Passionate about leveraging technology to craft transformative experiences. Known for skillfully aligning technical strategies with business objectives, particularly under challenging circumstances while cultivating a culture of partnership and continuous improvement.</p>
   jobHistory:
     - company: Oklahoma Christian University
       companyUrl: https://oc.edu
@@ -7,14 +7,14 @@
       duration: 2 yrs 2 mos
       title: Software Support Technician
       location: Oklahoma City, OK
-      description: Provided level 1 technical computer support to students, faculty, and staff. Support included general troubleshooting with quick resolution for software and limited hardware issues.
+      description: 
     - company: Infinite Images Photography
       startDate: 05-01-2005
       endDate: 09-01-2007
       duration: 2 yrs 4 mos
       title: Second Shooter and Photographer's Assistant
       location: Springfield, MO Area
-      description: Provided service as an additional wedding photographer and general assistant. Photography included formal, semi-formal, and candid portraits, architectural and decorative details, and informal group snapshots.
+      description: 
     - company: Jack Henry & Associates
       companyUrl: https://jackhenry.com
       startDate: 06-01-2007
@@ -22,7 +22,7 @@
       duration: 1 yr 3 mos
       title: Programmer/Analyst 1
       location: Springfield, MO
-      description: Worked as a member of the Core Director, Loan Maintenance team troubleshooting unexpected loan-specific behavior, simple and complex, and providing appropriate changes to the software to resolve any issues.
+      description: 
     - company: Chesapeak Energy
       companyUrl: https://chk.com
       startDate: 09-01-2008
@@ -34,25 +34,25 @@
         endDate: 12-01-2011
         duration: 3 yrs 5 mos
         location: Oklahoma City, OK
-        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget ultricies dolor, eget vehicula nisi. Praesent dignissim metus laoreet, congue velit et, bibendum ex. Cras mauris velit, vehicula et convallis eget, tincidunt vitae erat. Suspendisse in arcu eget libero varius dapibus sed sit amet nisl. Maecenas maximus, lorem vestibulum porta dapibus, quam purus gravida felis, a volutpat nisi nunc at nibh. Integer vitae risus efficitur, eleifend ante sit amet, accumsan lectus. Cras ante libero, tempor vel justo non, pharetra gravida felis. Aliquam posuere ullamcorper est id tincidunt.
+        description: 
       - title: SCADA Systems Analyst II
         startDate: 12-01-2011
         endDate: 05-01-2014
         duration: 2 yrs 5 mos
         location: Oklahoma City, OK
-        description: Nunc in nulla bibendum, placerat nibh eget, convallis turpis. Nunc viverra molestie placerat. Morbi dignissim, turpis in semper tincidunt, ligula nisi gravida ipsum, eget tempor urna eros ac lectus. Proin lacus urna, eleifend vel faucibus vitae, volutpat nec leo. Aliquam erat volutpat. Praesent sit amet nisi eget lectus posuere iaculis. Ut bibendum maximus nunc a sodales. Curabitur interdum eu ipsum ac feugiat. Praesent aliquet mi eget orci aliquet, ac pharetra ante scelerisque. Fusce sit amet nulla risus. Donec ac turpis ornare ligula tempus ullamcorper.
+        description: 
       - title: Software Developer II
         startDate: 05-01-2014
         endDate: 12-01-2016
         duration: 2 yrs 7 mos
         location: Oklahoma City, OK
-        description: Sed efficitur congue diam, sed suscipit mi. Aliquam dignissim, mi laoreet luctus consequat, nisl lorem imperdiet tortor, eu interdum turpis ipsum vitae nunc. Nunc sed blandit mi. Donec faucibus maximus ultricies. Nunc feugiat vitae sapien eget suscipit. Pellentesque tincidunt tortor sed aliquet rutrum. Mauris nec eros vel odio tincidunt sagittis. Praesent nec lectus mauris. Ut consequat lacus nec ornare sodales.
+        description: 
       - title: Senior Software Developer
         startDate: 12-01-2016
         endDate: 06-01-2018
         duration: 1 yr 7 mos
         location: Oklahoma City, OK
-        description: Fusce bibendum cursus lacus, sit amet fermentum magna dapibus ac. Cras ac cursus erat, at sodales arcu. Donec vel gravida velit. Sed felis neque, consequat eget felis sit amet, lobortis lobortis sem. Vestibulum quis turpis in leo molestie pharetra. Nullam eget velit orci. Sed condimentum orci dignissim mattis ornare. Donec dolor ligula, ultrices id libero id, blandit dignissim metus. Ut lectus elit, venenatis ut metus vitae, semper fermentum arcu. Sed bibendum turpis est, quis accumsan massa fermentum eget. Aenean bibendum ornare rutrum. Morbi finibus blandit dui.
+        description: 
     - company: Heartland Payment Systems
       companyUrl: https://heartland.us
       startDate: 06/01/2018
@@ -64,22 +64,28 @@
         endDate: 05-01-2020
         duration: 1 yr 10 mos
         location: Oklahoma City, OK
-        description: Sed auctor consectetur rhoncus. Nulla id velit eget tortor pharetra ornare. Vestibulum fringilla sapien ac augue vulputate suscipit. Ut nisi eros, porttitor nec sodales vel, dignissim nec urna. Morbi mi dolor, pretium in est sit amet, faucibus fringilla enim. Ut eget facilisis lectus. Pellentesque vitae sem arcu. Duis lobortis suscipit condimentum. Vestibulum finibus, tellus convallis auctor volutpat, magna massa lacinia sapien, sed iaculis leo justo id ligula.
+        description: <p>Advocated for automation, DevOps, and collaborative practices, enabling faster, secure software delivery. Guided cloud migration planning and application development. Influenced a culture of fast flow, fast feedback, and continuous experimentation and learning.<br /><br />- Established SDLC policies giving 19 developers high autonomy while ensuring software delivery that was both safe and fast.<br />- Led the Software Directional Leadership Team of 6 Senior Software Developers who planned every detail of Payroll’s migration through the first migration to the cloud in Heartland history.<br />- Co-led software development of the Payroll Application Development software delivery team.<br />- Interviewed and assisted in the selection of 4 new developers.</p>
       - title: Supervisor Software Development
         startDate: 05-01-2020
         endDate: 05-01-2021
         duration: 1 yr 1 mo
         location: Oklahoma City, OK
-        description: Suspendisse potenti. Praesent cursus turpis vel elementum mollis. Integer quis aliquam massa, ut pulvinar tellus. Suspendisse facilisis ligula non purus volutpat, eu ultricies tellus blandit. Quisque ac nunc quis lectus consectetur tempor. Curabitur molestie metus sed elit vestibulum congue. Duis non tortor at risus accumsan consequat eu ultrices sem. Vivamus posuere convallis urna, ut finibus augue. Vestibulum placerat sit amet quam id pellentesque. Suspendisse quis sapien orci. Cras tristique auctor interdum. Nullam id eros ante. Donec consectetur ipsum in mauris vulputate, in suscipit turpis consectetur. Etiam varius pharetra urna, a ullamcorper nunc ultricies ac.
+        description: <p>Championed the strategic refactoring and modernization of Payroll’s monolithic codebase. Cultivated autonomy in direct reports, promoting their growth and skill development. Responsible for new talent onboarding and integration.<br /><br />- Guided the creation of a strategy to iteratively create the first 5 bounded contexts and microservices letting teams deploy independently while balancing the delivery of value for the company.<br />- Co-led the Payroll Application Modernization effort and managed its backlog which saw the creation of Payroll’s very first small independent services carved out of the Payroll monolith.<br />- Interviewed and assisted in the selection of 10 new developers, 6 reporting directly to me fostering an environment of autonomy and productivity among direct reports.</p>
       - title: Manager Software Development
         startDate: 05-01-2021
         endDate: 04-01-2022
         duration: 1 yr 2 mos
         location: Oklahoma City, OK
-        description: Aenean interdum, libero aliquam malesuada vulputate, libero urna porttitor est, ut consectetur tellus purus ac velit. Proin in pellentesque felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean dignissim, leo a lobortis sodales, tellus metus ultricies leo, sit amet aliquam elit lacus et libero. Suspendisse vel erat ex. Vivamus posuere quis metus non iaculis. Mauris volutpat vestibulum sapien at porta. Praesent a ligula sit amet urna venenatis pulvinar. Praesent suscipit pulvinar tellus, at gravida nisi varius vitae. Mauris scelerisque nisi vitae elit vestibulum lacinia. Donec iaculis mauris vel velit rutrum, vel fermentum ex commodo. Aliquam placerat nisl sem, commodo maximus nibh ornare in. Maecenas sit amet tellus nec enim convallis auctor nec et ex. Fusce blandit odio ut urna dictum, nec tincidunt massa malesuada. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        description: <p>Molded global partnerships, streamlined onboarding, and elevated code quality. Expanded delivery teams, preparing a culture of quality and empowerment. Facilitated dynamic collaboration with diverse international teams.<br /><br/>- Orchestrated the team expansion project, doubling the size from 7 to 15 delivery teams to align with backlog depth.<br />- Implemented measures to ensure effective collaboration within the expanded team.</p>
       - title: Senior Manager Software Development
         startDate: 03-01-2022
+        endDate: 04-01-2023
+        duration: 1 yr 1 mo
+        location: Oklahoma City, OK
+        description: <p>Shepherded teams on performance, security, compliance, and alignment, ensuring safe and rapid value delivery. Fostered effective collaboration with Product, Engineering, and Security to optimize product outcomes.<br/><br/>- Established a team of Security Champions made up of 6 software developers who assist all software developers mitigate security vulnerabilities.<br/>- Implemented the automated integration of our work item management system with a security vulnerabilities tool, improving visibility of the work and its incorporation into the software development lifecycle.<br/>- Led a project where 5 delivery teams upgraded Payroll from AngularJS to the newest version of Angular for 200+ different UI screens, improving user-friendliness and visual appeal.</p>
+      - title: Director Software Development
+        startDate: 04-01-2023
         endDate: now
         duration: calculate
         location: Oklahoma City, OK
-        description: Adam leads other software developers to embrace a community-first mentality focusing on quality software that is written for humans before it’s written for computers by emphasizing the importance of always leaving code better than it was found by following principled practices like SOLID and the four pillars of Object Oriented Programming.
+        description: <p>Purposefully leading Payroll Technology teams responsible for core Payroll functionality including payroll processing, client management, employee self service, and the modernization of outdated technologies. Partnerships with peers leading Tax, Integration, and Human Capital Management teams ensure proper alignment and collaboration.</p>- Spearheaded the application stabilization initiative reducing system outages, improving user experience and ultimately reducing weekly errors by 85% in 15 months.<br/>- Owned the roadmap for 15 delivery teams, ensuring alignment with system stability objectives.<br/>- Directly responsible for an organization of 57 full time employees and contractors.</p>
