@@ -91,7 +91,8 @@ jobs:
           artifacts_dir: ${{ github.workspace }}
         run: |
           cd $artifacts_dir
-          ncftpput -R -v -u "$ftp_username" -p "$ftp_password" $ftp_location /dev/ ./artifact/
+          cd artifact
+          ncftpput -R -v -u "$ftp_username" -p "$ftp_password" $ftp_location /dev/ .
 
   release-prod:
     needs: [build, release-dev]
@@ -132,4 +133,5 @@ jobs:
           artifacts_dir: ${{ github.workspace }}
         run: |
           cd $artifacts_dir
-          ncftpput -R -v -u "$ftp_username" -p "$ftp_password" $ftp_location / ./artifact/
+          cd artifact
+          ncftpput -R -v -u "$ftp_username" -p "$ftp_password" $ftp_location / .
