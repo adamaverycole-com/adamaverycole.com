@@ -30,6 +30,7 @@ mastodon:
   - username: adamaverycole
     instance: mastodon.social
 google_analytics: G-0GXFJ8FX0Q
+google_tag: GTM-WFNCKPH7
 
 # Build settings
 theme: minima
