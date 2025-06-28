@@ -90,7 +90,7 @@
         location: Oklahoma City, OK
         description: <p>Shepherded teams on performance, security, compliance, and alignment, ensuring safe and rapid value delivery. Fostered effective collaboration with Product, Engineering, and Security to optimize product outcomes.<br/><br/>- Established a team of Security Champions made up of 6 software developers who assist all software developers mitigate security vulnerabilities.<br/>- Implemented the automated integration of our work item management system with a security vulnerabilities tool, improving visibility of the work and its incorporation into the software development lifecycle.<br/>- Led a project where 5 delivery teams upgraded Payroll from AngularJS to the newest version of Angular for 200+ different UI screens, improving user-friendliness and visual appeal.</p>
       - title: Director Software Development
-        startDate: 04-01-2023
+        startDate: 04/01/2023
         endDate: now
         duration: calculate
         location: Oklahoma City, OK
