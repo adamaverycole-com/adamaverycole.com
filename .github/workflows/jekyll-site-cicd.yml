@@ -83,6 +83,11 @@ jobs:
       
       
       # Looks kind of complicated but just uploads the content of _site folder to the ftp server. It does not upload the _site folder itself.
+      - uses: cschleiden/replace-tokens@v1
+        with:
+          files: '["**/*.html"]'
+        env:
+          google_tags_environment: ${{ secrets.GOOGLE_TAGS_ENVIRONMENT }}
       - name: Upload site to FTP.
         env: 
           ftp_location: ${{ secrets.FTP_LOCATION }} # Pass in required secrets.
@@ -125,6 +130,11 @@ jobs:
           # run-id: # optional, default is ${{ github.run_id }}
           
       # Looks kind of complicated but just uploads the content of _site folder to the ftp server. It does not upload the _site folder itself.
+      - uses: cschleiden/replace-tokens@v1
+        with:
+          files: '["**/*.html"]'
+        env:
+          google_tags_environment: ${{ secrets.GOOGLE_TAGS_ENVIRONMENT }}
       - name: Upload site to FTP.
         env: 
           ftp_location: ${{ secrets.FTP_LOCATION }} # Pass in required secrets.
