@@ -29,6 +29,7 @@ github_username: adamaverycole
 mastodon:
   - username: adamaverycole
     instance: mastodon.social
+google_analytics: G-0GXFJ8FX0Q
 
 # Build settings
 theme: minima
